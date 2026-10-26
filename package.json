@@ -1,0 +1,23 @@
+{
+    "name":  "dsh-whale-memory",
+    "version":  "1.4.0",
+    "type":  "module",
+    "description":  "给 DeepSeek Harness 的记忆插件：人格注入 + 空骨架 + 记忆/检索/灵感/任务/看图工具，零依赖",
+    "main":  "index.js",
+    "files":  [
+                  "index.js",
+                  "lib/**",
+                  "cordis.patch.yml",
+                  "templates/**",
+                  "README.md"
+              ],
+    "license":  "MIT",
+    "peerDependencies":  {
+                             "@deepseek-ai/cordis":  "~4.0.5"
+                         },
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           }
+            }
+}

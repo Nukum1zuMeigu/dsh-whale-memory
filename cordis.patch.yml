@@ -1,0 +1,16 @@
+# dsh-whale-memory
+#
+# 三件事：
+#   1. 把 <工作区>/memory/persona/core.md 里 inject 段挂进 systemPrompt，每个会话开场都在
+#   2. 工作区里没有 memory/ 时，从包内 templates 落一套骨架（已有文件一个都不覆盖）
+#   3. inbox 攒着没整理、日记又停了好一阵时，在提示里加一句提醒（只看状态，不改文件）
+#
+# 改人格文件不用重启，下一个请求就生效。
+- insert:
+    - id: whale-memory
+      name: dsh-whale-memory
+      config:
+        order: 9
+        # nudge: true              # 关掉提醒就写 false
+        # nudgeAfterHours: 12      # 多久没动日记才提醒
+        # nudgeCooldownMinutes: 60 # 两次提醒之间至少隔多久，免得每轮刷
